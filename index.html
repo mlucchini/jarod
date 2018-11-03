@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Jarod</title>
+    <link href="lib/bootstrap.min.css" rel="stylesheet">
+    <link href="main/main.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Jarod</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link" href="simple/index.html">Simple</a>
+          </nav>
+        </div>
+      </header>
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Create random profiles.</h1>
+        <canvas id="qr"></canvas>
+        <p id="result" class="lead"></p>
+        <div class="input-group input-group-lg">
+          <input id="template" value="v1|{{random.number}}|{{name.firstName}}|{{name.lastName}}|{{company.companyName}}|{{name.jobTitle}}|{{internet.email}}|{{phone.phoneNumber}}|{{address.country}}" type="text" class="form-control">
+          <div>
+            <label for="locales"></label>
+            <select id="locales" class="form-control-lg">
+              <option>az</option>
+              <option>cz</option>
+              <option>de</option>
+              <option>de_AT</option>
+              <option>de_CH</option>
+              <option selected="selected">en</option>
+              <option>en_AU</option>
+              <option>en_CA</option>
+              <option>en_GB</option>
+              <option>en_IE</option>
+              <option>en_IND</option>
+              <option>en_US</option>
+              <option>en_ZA</option>
+              <option>es</option>
+              <option>es_MX</option>
+              <option>fa</option>
+              <option>fr</option>
+              <option>fr_CA</option>
+              <option>ge</option>
+              <option>id_ID</option>
+              <option>it</option>
+              <option>ja</option>
+              <option>ko</option>
+              <option>nb_NO</option>
+              <option>nep</option>
+              <option>nl</option>
+              <option>pl</option>
+              <option>pt_BR</option>
+              <option>pt_PT</option>
+              <option>ru</option>
+              <option>sk</option>
+              <option>sv</option>
+              <option>tr</option>
+              <option>uk</option>
+              <option>vi</option>
+              <option>zh_CN</option>
+              <option>zh_TW</option>
+            </select>
+          </div>
+        </div>
+        <p class="lead">
+          <a id="create-button" href="#" class="btn btn-lg btn-secondary">Create</a>
+        </p>
+      </main>
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Available data documentation at: <a href="https://github.com/marak/Faker.js#user-content-api-methods" target="_blank">Faker.js</a>.</p>
+        </div>
+      </footer>
+    </div>
+    <script src="lib/jquery-slim.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/qrious.min.js"></script>
+		<script src="lib/faker.min.js"></script>
+    <script src="main/main.js"></script>
+    <script>
+      document.getElementById("create-button").onclick = make;
+      make();
+    </script>
+  </body>
+</html>
