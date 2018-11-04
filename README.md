@@ -2,6 +2,8 @@
 
 Create random profiles and make QR codes for them.
 
+Available offline as a Progressive Web App. Just add the app to your Home Screen.
+
 ## Classic mode
 
 Create a new profile using a custom `Faker` template and choose from many locales.
