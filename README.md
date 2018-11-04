@@ -2,7 +2,7 @@
 
 Create random profiles and make QR codes for them.
 
-## Normal mode
+## Classic mode
 
 Create a new profile using a custom `Faker` template and choose from many locales.
 
